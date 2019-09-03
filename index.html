@@ -10,30 +10,42 @@
   <body>
 
     <div id="app"></div>
- 
+ <h1>
     <i class="fas fa-file-contract"></i> 
-    CRSREP
-
+    <span id="companyName">АйФлай</span> <span id="systemName">Отчеты и списки</span>
+</h1> 
  
 <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
+  <a href="#home">Главная</a>
   <div class="dropdown">
-    <button class="dropbtn">Dropdown 
+    <button class="dropbtn">Отчеты
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="#">Закрытые рейсы</a>
+      <a href="#">Открытые рейсы</a>
+      <a href="#">Проданные ET</a>
+      <a href="#">Доп услуги</a>
     </div>
   </div> 
+  <!--
+  <div class="dropdown">
+    <button class="dropbtn">Списки
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      
+    </div>
+  </div> -->
+  <a href="#help">Справка</a>
 </div>
 
 
     <form>
-<input type="text" placeholder="Flight No"></input>
-<input type="date" placeholder="Flight No"></input>
+Номер
+<input type="text" placeholder="Flight No" id="frmFlightNo" />
+Дата
+<input type="date" />
  
     </form>
   </body>
