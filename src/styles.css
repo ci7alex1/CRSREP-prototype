@@ -24,12 +24,12 @@ h1 #systemName {
 
 a:link,
 a:visited {
-  color: rgb(30, 106, 194);
+  /*color: rgb(30, 106, 194);*/
+  color: #000;
 }
 
 input {
   font-family: "segoe ui", sans-serif;
-  font-size: 12px;
   border: 1px solid #69c;
   padding: 8px;
   margin: 2px;
@@ -41,13 +41,14 @@ input[type="date"] {
 
 .navbar {
   overflow: hidden;
-  border-bottom: 1px solid #39f;
+  border-bottom: 0px solid #39f;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .navbar a {
   float: left;
-  text-align: center;
+  text-align: left;
   padding: 8px 12px;
   text-decoration: none;
 }
@@ -64,12 +65,14 @@ input[type="date"] {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  color: rgb(30, 106, 194);
+  /* color: rgb(30, 106, 194);*/
+  color: #000;
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #f5f5f5;
+  background-color: #fff;
+  border-bottom: 2px solid #9cf;
 }
 
 .dropdown-content {
@@ -90,9 +93,40 @@ input[type="date"] {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #f5f5f5;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+#inputForm {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+}
+
+form button {
+  padding: 6px 12px;
+  margin: 2px;
+  font-weight: bold;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+}
+
+legend {
+  padding: 5px 8px;
+  color: rgb(30, 106, 194);
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+#frmAirportFrom,
+#frmAirportTo {
+  width: 4rem;
+}
+
+#frmAirlineCode {
+  width: 2rem;
 }

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CRSREP - TAIS Отчеты</title>
+    <title></title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/styles.css">
     <script src="src/index.js"></script>
   </head>
 
   <body>
-
+<!-- BEGIN Generic app container -->
     <div id="app"></div>
+<!-- END Generic app container -->
+<!-- BEGIN App Header -->
  <h1>
     <i class="fas fa-file-contract"></i> 
     <span id="companyName">АйФлай</span> <span id="systemName">Отчеты и списки</span>
 </h1> 
- 
+ <!-- END App Header -->
+ <!-- BEGIN Navigation -->
 <div class="navbar">
   <a href="#home">Главная</a>
   <div class="dropdown">
@@ -23,9 +26,10 @@
     </button>
     <div class="dropdown-content">
       <a href="#">Закрытые рейсы</a>
-      <a href="#">Открытые рейсы</a>
       <a href="#">Проданные ET</a>
-      <a href="#">Доп услуги</a>
+      <a href="#">Проданные доп услуги</a>
+      <a href="#">Трансферные пассажиры</a>
+      <a href="#">Загрузка рейсов</a>
     </div>
   </div> 
   <!--
@@ -37,16 +41,66 @@
       
     </div>
   </div> -->
+  <a href="#schedule">Расписание</a>
+  <a href="#archive">Архив</a>
   <a href="#help">Справка</a>
 </div>
+<!-- END Navigation -->
 
+<!-- BEGIN Search Form -->
+    <form id="inputForm">
+      <fieldset>
+    <legend>Параметры рейса</legend>
 
-    <form>
-Номер
+<input type="text" placeholder="AK" id="frmAirlineCode" value="F7" disabled="disabled" />
 <input type="text" placeholder="Flight No" id="frmFlightNo" />
-Дата
 <input type="date" />
- 
+<input type="radio" value="bySeg" name="frmFltLoad" id="radioBySeg" />
+<label for="bySeg">По сегментам</label>
+<input type="radio" value="byLeg" name="frmFltLoad" id="radioByLeg" />
+<label for="byLeg">По плечам</label>
+<input type="text" placeholder="Откуда" id="frmAirportFrom" />
+<input type="text" placeholder="Куда" id="frmAirportTo" />
+ </fieldset>
+
+      <fieldset >
+    <legend>Параметры пассажира</legend>
+
+<input type="text" placeholder="Фамилия" id="frmPaxName" />
+<input type="text" placeholder="Номер билета (ET)" id="frmET" />
+<input type="text" placeholder="Локатор (PNR)" id="frmPNR" />
+
+ </fieldset>
+
+   <fieldset >
+    <legend>Параметры ET/EMD</legend>
+
+<input type="text" placeholder="Статусы" id="frmETStatus" />
+<input type="text" placeholder="Класс брон." id="frmRBD" />
+<input type="text" placeholder="RFIC" id="frmRFIC" />
+<input type="text" placeholder="RFISC" id="frmRFISC" />
+
+ </fieldset>
+
+
+<br />
+<button>Запрос</button>
     </form>
+
+<!-- END Search Form -->
+
+
+<div id="results">
+<iframe
+  widths="600"
+  heights="400"
+  seamless
+  frameBorder="0"
+  scrolling="no"
+  src="http://192.168.111.198:8088/superset/explore/?form_data=%7B%22datasource%22%3A%2216__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A6%2C%22url_params%22%3A%7B%7D%2C%22granularity_sqla%22%3A%22DEPDATE%22%2C%22time_grain_sqla%22%3A%22P1D%22%2C%22time_range%22%3A%22100+years+ago+%3A+%22%2C%22groupby%22%3A%5B%5D%2C%22metrics%22%3A%5B%5D%2C%22percent_metrics%22%3A%5B%5D%2C%22timeseries_limit_metric%22%3Anull%2C%22row_limit%22%3A1000%2C%22include_time%22%3Afalse%2C%22order_desc%22%3Atrue%2C%22all_columns%22%3A%5B%22FLT%22%2C%22DEPDATE%22%2C%22DEPTIME%22%2C%22DEPARPT%22%2C%22ARRARPT%22%2C%22LOCATOR%22%2C%22PSGRNAME%22%2C%22SEAT%22%2C%22SSRCODE%22%2C%22EMDNUMBER%22%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22adhoc_filters%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22align_pn%22%3Afalse%2C%22color_pn%22%3Atrue%7D&standalone=true&height=400"
+>
+</iframe>
+</div>
+
   </body>
 </html>
