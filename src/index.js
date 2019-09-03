@@ -1,3 +1,3 @@
 import "./styles.css";
 
-document.getElementById("app").innerHTML = "Hello World";
+document.getElementById("app").innerHTML = "";
