@@ -137,19 +137,21 @@ legend {
 
 table,
 td {
-  font-family: arial;
-  font-size: 12px;
+  font-size: 0.9em;
   text-align: left;
+  font-family: "arial", arial, sans-serif;
 }
 
 th {
   padding: 4px;
   border-bottom: 2px solid #999;
   color: #999;
+  font-weight: normal;
 }
 
 td {
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #e9e7e7;
+  border-right: 1px solid #e9e7e7;
   padding: 6px;
 }
 
@@ -163,7 +165,7 @@ th.reactable-th-deptime {
 
 #results {
   width: auto;
-  height: 400px;
+  height: 500px;
   overflow: auto;
   margin-top: 1rem;
   border: solid 1px #999;
@@ -190,4 +192,10 @@ i.fa-file-export {
   border: 1px solid #ccc;
   border-top: none;
   padding: 12px 16px;
+}
+
+h2 {
+  font-weight: normal;
+  color: #39f;
+  margin-left: 10px;
 }
