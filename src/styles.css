@@ -1,7 +1,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
 body {
-  font-family: "segoe ui", sans-serif;
+  font-family: "segoe ui", arial, sans-serif;
   font-size: 14px;
 }
 
@@ -29,7 +29,7 @@ a:visited {
 }
 
 input {
-  font-family: "segoe ui", sans-serif;
+  font-family: "segoe ui", arial, sans-serif;
   border: 1px solid #69c;
   padding: 8px;
   margin: 2px;
@@ -37,6 +37,7 @@ input {
 
 input[type="date"] {
   padding: 6px;
+  color: #999;
 }
 
 .navbar {
@@ -105,18 +106,21 @@ input[type="date"] {
   padding: 12px 16px;
 }
 
-form button {
+button {
   padding: 6px 12px;
   margin: 2px;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: "segoe ui", arial, sans-serif;
 }
 
 fieldset {
   border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: none;
 }
 
 legend {
-  padding: 5px 8px;
+  padding: 4px 8px;
   color: rgb(30, 106, 194);
   font-size: 0.9em;
   font-weight: normal;
@@ -129,4 +133,61 @@ legend {
 
 #frmAirlineCode {
   width: 2rem;
+}
+
+table,
+td {
+  font-family: arial;
+  font-size: 12px;
+  text-align: left;
+}
+
+th {
+  padding: 4px;
+  border-bottom: 2px solid #999;
+  color: #999;
+}
+
+td {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 6px;
+}
+
+td[label="DEPTIME"] {
+  display: none;
+}
+
+th.reactable-th-deptime {
+  display: none;
+}
+
+#results {
+  width: auto;
+  height: 400px;
+  overflow: auto;
+  margin-top: 1rem;
+  border: solid 1px #999;
+  padding: 8px;
+}
+
+i.fa-file-contract {
+  color: #39f;
+  font-size: 0.9em;
+}
+
+i.fa-file-export {
+  color: #39f;
+}
+
+#lblDocumentNo {
+  font-size: 0.8em;
+  background-color: rgb(195, 252, 195);
+  padding: 0px;
+  display: none;
+}
+
+#actionButtons {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 12px 16px;
 }
